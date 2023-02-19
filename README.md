@@ -1,49 +1,14 @@
-# Boas vindas ao repositório do projeto NodeJs/Express CRUD Api!
+# Node API Palestrantes
 
 https://user-images.githubusercontent.com/78225894/140179175-155352b4-f11b-4406-b2e3-06277c38a388.mp4
 
 ---
 
-# Sumário
-
-- [Habilidades](#habilidades)
-- [Entregáveis](#entregáveis)
-  - [O que foi desenvolvido](#o-que-foi-desenvolvido)
-  - [Desenvolvimento](#desenvolvimento)
-- [Instruções para rodar o projeto](#instruções-para-rodar-o-projeto)
-  - [Lista de requisitos](#lista-de-requisitos)
-    - [1 - Crie o endpoint GET /talker](#1---crie-o-endpoint-get-talker)
-    - [2 - Crie o endpoint GET /talker/:id](#2---crie-o-endpoint-get-talkerid)
-    - [3 - Crie o endpoint POST /login](#3---crie-o-endpoint-post-login)
-    - [4 - Crie o endpoint POST /talker](#4---crie-o-endpoint-post-talker)
-    - [5 - Crie o endpoint PUT /talker/:id](#5---crie-o-endpoint-put-talkerid)
-    - [6 - Crie o endpoint DELETE /talker/:id](#6---crie-o-endpoint-delete-talkerid)
-    - [7 - Crie o endpoint GET /talker/search?q=searchTerm](#7---crie-o-endpoint-get-talkersearchqsearchterm)
-
----
-
-# Habilidades
-
-Neste projeto, desenvolvi as seguintes habilidades:
-
-- Realizar operações assíncronas utilizando callbacks;
-- Realizar operações assíncronas utilizando Promises;
-- Ler e escrever arquivos localmente com NodeJS;
-- Escrever seus próprios scripts que criam e consomem Promises;
-- Reescrever código que usa callbacks para que use Promises;
-- Realizar chamadas de funções de forma consciente;
-- Entender os conceitos básicos de como o JavaScript funciona;
-- Detectar e solucionar problemas no código de forma mais objetiva;
-- Entender a diferença entre execução síncrona e assíncrona;
-- Entender o que é o HTTP, o que é uma API e o que os dois têm a ver com o Express;
-- Escrever APIs utilizando Node e Express;
-- Entender a estrutura de uma aplicação Express e como organizar seu código;
-- Criar rotas e aplicar middlewares.
----
-
 ## O que foi desenvolvido
 
 Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrantes. Foram desenvolvidos alguns endpoints que irão ler e escrever em um arquivo, isso utilizando o módulo `fs`.
+
+https://nodejs.org/api/fs.html
 
 ## Desenvolvimento
 
@@ -64,7 +29,7 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
 - `npm start`
 
 4. Para testar as rotas:
-- `Utilize o Insomnia(software onde testo os endpoints)`
+- `Utilizei o Insomnia(software onde testo os endpoints)`
 - `Pelo próprio navegador (localhost:3000)`
 
 ## Lista de requisitos
@@ -85,9 +50,7 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
 
 ---
 
-### 1 - Crie o endpoint GET `/talker`
-
-#### Os seguintes pontos serão avaliados:
+### 1 -  Endpoint GET `/talker`
 
 - O endpoint deve retornar um array com todas as pessoas palestrantes cadastradas. Devendo retornar o `status 200`, com o seguinte corpo:
 
@@ -123,7 +86,7 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
 - Caso não exista nenhuma pessoa palestrante cadastrada o endpoint deve retornar um array vazio e o `status 200`.
 
 
-### 2 - Crie o endpoint GET `/talker/:id`
+### 2 - Endpoint GET `/talker/:id`
 
 - O endpoint deve retornar uma pessoa palestrante com base no id da rota. Devendo retornar o `status 200` ao fazer uma requisição `/talker/1`, com o seguinte corpo:
 
@@ -144,9 +107,8 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
   }
   ```
 
-### 3 - Crie o endpoint POST `/login`
+### 3 - Endpoint POST `/login`
 
-#### Os seguintes pontos serão avaliados:
 
 - O endpoint deve ser capaz de retornar um token aleatório de 16 caracteres que deverá ser utilizado nas demais requisições.
 
@@ -203,9 +165,7 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
     }
     ```
 
-### 4 - Crie o endpoint POST `/talker`
-
-#### Os seguintes pontos serão avaliados:
+### 4 - Endpoint POST `/talker`
 
 - O endpoint deve ser capaz de adicionar uma nova pessoa palestrante ao seu arquivo;
 
@@ -322,9 +282,7 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
   }
   ```
 
-### 5 - Crie o endpoint PUT `/talker/:id`
-
-#### Os seguintes pontos serão avaliados:
+### 5 - Endpoint PUT `/talker/:id`
 
 - O endpoint deve ser capaz de editar uma pessoa palestrante com base no id da rota, sem alterar o id registrado.
 
@@ -441,9 +399,7 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
   }
   ```
 
-### 6 - Crie o endpoint DELETE `/talker/:id`
-
-#### Os seguintes pontos serão avaliados:
+### 6 - Endpoint DELETE `/talker/:id`
 
 - A requisição deve ter o token de autenticação nos headers, no campo `authorization`.
 
@@ -470,9 +426,7 @@ Uma API de um CRUD (**C**reate, **R**ead, **U**pdate e **D**elete) de palestrant
   ```
 
 
-### 7 - Crie o endpoint GET `/talker/search?q=searchTerm`
-
-#### Os seguintes pontos serão avaliados:
+### 7 - Endpoint GET `/talker/search?q=searchTerm`
 
 - O endpoint deve retornar um array de palestrantes que contenham em seu nome o termo pesquisado no queryParam da URL. Devendo retornar o `status 200`, com o seguinte corpo:
 
